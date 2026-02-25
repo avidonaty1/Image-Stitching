@@ -5,7 +5,7 @@ A feature-based image stitching algorithm implementing SIFT feature detection, d
 
 ---
 
-## Overview
+# Overview
 
 This project implements a complete end-to-end image stitching workflow:
 
@@ -18,18 +18,24 @@ This project implements a complete end-to-end image stitching workflow:
 
 Each of the 3 images must be of the same resolution. There must be sufficient overlap between each of the images for SIFT to be able to pick up the features.
 
-# Feature Matches
+## Feature Matches
 These are the matched features picked up by SIFT, before thresholding.
 
-![Raw_Matches](raw_feature_matches.jpg)
+![Raw_Matches](results/raw_feature_matches.jpg)
 
 These are the matched features picked up by SIFT, after Lowe's ratio test.
 
-![Matches](matched_features.jpg)
+![Matches](results/matched_features.jpg)
+
+## Final Mosaic
+This is the final output after perspective warping.
+
+![Output](results/keble_mosaic.jpg)
 
 The goal of the project was to build the full pipeline from scratch (using OpenCV primitives where appropriate) and understand each stage of geometric image alignment.
 
+## Usage
 
-
-
-
+```bash
+pip install -r requirements.txt
+./run.sh {left-image} {middle-image} {right-image} {mosaic-file-name}
