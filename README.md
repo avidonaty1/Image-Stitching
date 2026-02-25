@@ -19,11 +19,16 @@ This project implements a complete end-to-end image stitching workflow:
 Each of the 3 images must be of the same resolution. There must be sufficient overlap between each of the images for SIFT to be able to pick up the features.
 
 # Feature Matches
+These are the matched features picked up by SIFT, before thresholding.
+
+![Raw_Matches](raw_feature_matches.jpg)
+
 These are the matched features picked up by SIFT, after Lowe's ratio test.
 
 ![Matches](matched_features.jpg)
 
 The goal of the project was to build the full pipeline from scratch (using OpenCV primitives where appropriate) and understand each stage of geometric image alignment.
+
 
 
 
